@@ -85,11 +85,13 @@ Scripts SQL versionados em `src/main/resources/db/migration`:
 git clone https://github.com/seuusuario/MySmartKitchen.git
 cd MySmartKitchen
 
-**# Configuração de ambientes
-**## Crie um arquivo .env baseado no .env.example e configure suas credenciais:
+## 2. Configuração de variáveis de ambiente
 
+Crie um arquivo `.env` baseado no `.env.example` e configure suas credenciais:
+
+`.env.example`
+```env
 DB_URL=jdbc:postgresql://localhost:5432/mysmartkitchen
 DB_USER=seuUsuario
 DB_PASSWORD=suaSenha
 JWT_SECRET=seuSegredoAqui
-
