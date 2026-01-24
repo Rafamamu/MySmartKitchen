@@ -81,17 +81,72 @@ Scripts SQL versionados em `src/main/resources/db/migration`:
 ## 🚀 Como rodar o projeto
 
 ### 1. Clonar o repositório
-```bash
+`bash
 git clone https://github.com/seuusuario/MySmartKitchen.git
-cd MySmartKitchen
+cd MySmartKitchen`
 
-## 2. Configuração de variáveis de ambiente
+### 2. Configuração de variáveis de ambiente
 
 Crie um arquivo `.env` baseado no `.env.example` e configure suas credenciais:
 
 `.env.example`
-```env
+`env
 DB_URL=jdbc:postgresql://localhost:5432/mysmartkitchen
 DB_USER=seuUsuario
 DB_PASSWORD=suaSenha
-JWT_SECRET=seuSegredoAqui
+JWT_SECRET=seuSegredoAqui`
+
+## 3. 🐳 Rodar com Docker
+` docker-compose up -d `
+
+## 4. Executar a Aplicação
+`./mvn spring-boot:run`
+### Acesse em: 
+`http://localhost:8080`
+
+## 5. Exemplo de docker-compose.yml
+`docker-compose.yml`
+
+`version: '3.8'
+services:
+  db:
+    image: postgres:15
+    container_name: mysmartkitchen-db
+    environment:
+      POSTGRES_USER: exemploUsuario
+      POSTGRES_PASSWORD: exemploSenha
+      POSTGRES_DB: mysmartkitchen
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+  app:
+    build: .
+    container_name: mysmartkitchen-app
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/mysmartkitchen
+      DB_USER: exemploUsuario
+      DB_PASSWORD: exemploSenha
+      JWT_SECRET: exemploSegredo
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+volumes:
+  db_data:`
+
+  # 6. Contribuição
+  contribuições são bem-vindas!
+  Abra uma issue ou envie um pull request.
+
+  # 7. Licença
+  ### Este projeto está sob licença MIT.
+  A licença MIT permite uso, modificação e distribuição livre do código, inclusive em projetos comerciais, desde que o aviso de direitos
+  autorais e o texto da licença sejam mantidos.
+  O software é fornecido "come está", sem garantias de funcionamento ou responsabilidade do autor.
+  
+
+
+
+
+
