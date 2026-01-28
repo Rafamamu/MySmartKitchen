@@ -3,14 +3,17 @@ spring:
     name: MySmartKitchen
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/MySmartKitchen
+    url: jdbc:postgresql://localhost:5433/MySmartKitchen
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
 
   jpa:
+    hibernate:
+      ddl-auto: validate
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
+
 
   flyway:
     enabled: true

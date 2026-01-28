@@ -8,7 +8,7 @@ import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "produtos")
+@Table(name = "tb_produto")
 public class Produto {
 
     @Id
@@ -27,13 +27,14 @@ public class Produto {
     @NotNull
     private BigDecimal preco;
 
-    @NotBlank
-    private String categoria;
-
     @NotNull
     private Boolean disponivel;
 
     private String imagemUrl;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "categoria_id", nullable = false)
+    private Categoria categoria;
 
 
     public Produto() {
@@ -43,7 +44,7 @@ public class Produto {
                    String nome,
                    String descricao,
                    BigDecimal preco,
-                   String categoria,
+                   Categoria categoria,
                    Boolean disponivel,
                    String imagemUrl) {
 
@@ -89,11 +90,11 @@ public class Produto {
         this.preco = preco;
     }
 
-    public String getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
 
