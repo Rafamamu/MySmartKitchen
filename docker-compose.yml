@@ -3,17 +3,15 @@ version: '3.8'
 services:
   app:
     build: .
-    ports:
-      - "8080:8080"
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/MySmartKitchen
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/MySmartKitchen
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
       SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.PostgreSQLDialect
       SPRING_JPA_SHOW_SQL: "true"
-      SPRING_FLYWAY_ENABLED: "true"
+      SPRING_FLYWAY_ENABLED: "false"
     restart: always
 
   db:
@@ -23,7 +21,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: MySmartKitchen
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 

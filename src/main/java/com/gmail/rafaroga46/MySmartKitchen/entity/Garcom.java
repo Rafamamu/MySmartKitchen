@@ -71,7 +71,6 @@ public class Garcom {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", login='" + login + '\'' +
-                ", senha='" + senha + '\'' +
                 '}';
     }
 
