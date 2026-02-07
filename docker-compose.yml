@@ -6,7 +6,7 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/MySmartKitchen
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/mysmartkitchen
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
       SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.PostgreSQLDialect
@@ -19,7 +19,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: MySmartKitchen
+      POSTGRES_DB: mysmartkitchen
     ports:
       - "5432:5432"
     volumes:

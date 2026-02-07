@@ -3,7 +3,7 @@ spring:
     name: MySmartKitchen
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/MySmartKitchen
+    url: jdbc:postgresql://localhost:5432/mysmartkitchen
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
