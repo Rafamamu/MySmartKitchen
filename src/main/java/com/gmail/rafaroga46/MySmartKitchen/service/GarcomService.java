@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Service
 public class GarcomService {
 
-    private final  GarcomRepository garcomRepository;
-    private final GarcomMapper mapper;
+    private final GarcomRepository garcomRepository;
 
-    public GarcomService(GarcomRepository garcomRepository, GarcomMapper mapper) {
+
+    public GarcomService(GarcomRepository garcomRepository) {
         this.garcomRepository = garcomRepository;
-        this.mapper = mapper;
+
     }
 
 

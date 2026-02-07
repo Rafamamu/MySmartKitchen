@@ -4,7 +4,7 @@ import com.gmail.rafaroga46.MySmartKitchen.entity.Garcom;
 import com.gmail.rafaroga46.MySmartKitchen.controller.request.CreateGarcomRequest;
 import com.gmail.rafaroga46.MySmartKitchen.controller.request.response.GarcomResponse;
 import lombok.experimental.UtilityClass;
-import org.springframework.stereotype.Component;
+
 
 @UtilityClass
 public class GarcomMapper {
