@@ -2,7 +2,7 @@ package com.gmail.rafaroga46.MySmartKitchen.mapper;
 
 import com.gmail.rafaroga46.MySmartKitchen.entity.Garcom;
 import com.gmail.rafaroga46.MySmartKitchen.controller.request.CreateGarcomRequest;
-import com.gmail.rafaroga46.MySmartKitchen.controller.request.response.GarcomResponse;
+import com.gmail.rafaroga46.MySmartKitchen.controller.response.GarcomResponse;
 import lombok.experimental.UtilityClass;
 
 

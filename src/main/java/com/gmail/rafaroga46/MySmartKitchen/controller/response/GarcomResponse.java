@@ -1,4 +1,4 @@
-package com.gmail.rafaroga46.MySmartKitchen.controller.request.response;
+package com.gmail.rafaroga46.MySmartKitchen.controller.response;
 
 import lombok.Builder;
 
